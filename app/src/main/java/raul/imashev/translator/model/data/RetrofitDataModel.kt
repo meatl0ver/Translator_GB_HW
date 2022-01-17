@@ -2,7 +2,7 @@ package raul.imashev.translator.model.data
 
 import com.google.gson.annotations.SerializedName
 
-class DataModel(
+class RetrofitDataModel(
     @field:SerializedName("text") val text: String?,
     @field:SerializedName("meanings") val meanings: List<Meanings>?
 )

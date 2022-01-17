@@ -1,10 +1,10 @@
 package raul.imashev.translator.model.datasourse
 
 import io.reactivex.Observable
-import raul.imashev.translator.model.data.DataModel
+import raul.imashev.translator.model.data.RetrofitDataModel
 
 class DataSourceRemote(private val remoteProvider: RetrofitImplementation = RetrofitImplementation()) :
-    DataSource<List<DataModel>> {
+    DataSource<List<RetrofitDataModel>> {
 
-    override fun getData(word: String): Observable<List<DataModel>> = remoteProvider.getData(word)
+    override fun getData(word: String): Observable<List<RetrofitDataModel>> = remoteProvider.getData(word)
 }

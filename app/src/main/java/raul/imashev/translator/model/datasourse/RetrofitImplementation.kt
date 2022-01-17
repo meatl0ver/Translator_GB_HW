@@ -5,13 +5,13 @@ import io.reactivex.Observable
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import raul.imashev.translator.model.data.DataModel
+import raul.imashev.translator.model.data.RetrofitDataModel
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class RetrofitImplementation : DataSource<List<DataModel>> {
+class RetrofitImplementation : DataSource<List<RetrofitDataModel>> {
 
-    override fun getData(word: String): Observable<List<DataModel>> {
+    override fun getData(word: String): Observable<List<RetrofitDataModel>> {
         return getService(BaseInterceptor.interceptor).search(word)
     }
 

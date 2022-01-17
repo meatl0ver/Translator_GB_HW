@@ -2,13 +2,13 @@ package raul.imashev.translator.view.main
 
 import io.reactivex.Observable
 import raul.imashev.translator.model.data.AppState
-import raul.imashev.translator.model.data.DataModel
+import raul.imashev.translator.model.data.RetrofitDataModel
 import raul.imashev.translator.model.repository.Repository
 import raul.imashev.translator.presenter.Interactor
 
 class MainInteractor(
-    private val remoteRepository: Repository<List<DataModel>>,
-    private val localRepository: Repository<List<DataModel>>
+    private val remoteRepository: Repository<List<RetrofitDataModel>>,
+    private val localRepository: Repository<List<RetrofitDataModel>>
 ) : Interactor<AppState> {
 
     override fun getData(word: String, fromRemoteSource: Boolean): Observable<AppState> {

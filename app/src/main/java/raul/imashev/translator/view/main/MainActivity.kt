@@ -1,6 +1,5 @@
 package raul.imashev.translator.view.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View.GONE
 import android.view.View.VISIBLE
@@ -9,7 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import raul.imashev.translator.R
 import raul.imashev.translator.databinding.ActivityMainBinding
 import raul.imashev.translator.model.data.AppState
-import raul.imashev.translator.model.data.DataModel
+import raul.imashev.translator.model.entity.DataModel
 import raul.imashev.translator.presenter.Presenter
 import raul.imashev.translator.view.base.BaseActivity
 import raul.imashev.translator.view.base.View
@@ -50,7 +49,13 @@ class MainActivity : BaseActivity<AppState>() {
     override fun renderData(appState: AppState) {
         when (appState) {
             is AppState.Success -> {
-                val dataModel = appState.data
+                val retrofitDataModel = appState.data
+                val dataModel = mutableListOf<DataModel>()
+                if (retrofitDataModel != null) {
+                    for (i in retrofitDataModel) {
+                        dataModel.add(DataModel(i.text, i.meanings))
+                    }
+                }
                 if (dataModel == null || dataModel.isEmpty()) {
                     showErrorScreen(getString(R.string.empty_server_response_on_success))
                 } else {
