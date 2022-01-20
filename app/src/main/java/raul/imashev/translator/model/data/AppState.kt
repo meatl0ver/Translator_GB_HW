@@ -1,7 +1,9 @@
 package raul.imashev.translator.model.data
 
+import raul.imashev.translator.model.entity.DataModel
+
 sealed class AppState {
-    data class Success(val data: List<RetrofitDataModel>?) : AppState()
+    data class Success(val data: List<DataModel>) : AppState()
     data class Error(val error: Throwable) : AppState()
     data class Loading(val progress: Int?) : AppState()
 }
