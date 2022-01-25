@@ -1,15 +1,14 @@
 package raul.imashev.translator.utils
 
 import raul.imashev.translator.model.data.AppState
+import raul.imashev.translator.model.data.DataModel
 import raul.imashev.translator.model.data.Meanings
-import raul.imashev.translator.model.entity.DataModel
 
-
-fun parseSearchResults(state: AppState): AppState {
+fun parseSearchResults(data: AppState): AppState {
     val newSearchResults = arrayListOf<DataModel>()
-    when (state) {
+    when (data) {
         is AppState.Success -> {
-            val searchResults = state.data
+            val searchResults = data.data
             if (!searchResults.isNullOrEmpty()) {
                 for (searchResult in searchResults) {
                     parseResult(searchResult, newSearchResults)
