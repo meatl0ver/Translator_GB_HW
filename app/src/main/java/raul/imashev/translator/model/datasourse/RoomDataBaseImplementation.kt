@@ -1,11 +1,9 @@
 package raul.imashev.translator.model.datasourse
 
-import io.reactivex.Observable
-import raul.imashev.translator.model.data.RetrofitDataModel
+import raul.imashev.translator.model.data.DataModel
 
-class RoomDataBaseImplementation : DataSource<List<RetrofitDataModel>> {
-    override fun getData(word: String): Observable<List<RetrofitDataModel>> {
-        TODO("not implemented") // To change body of created functions use File
-        // | Settings | File Templates.
+class RoomDataBaseImplementation : DataSource<List<DataModel>> {
+    override suspend fun getData(word: String): List<DataModel> {
+        TODO("not implemented")
     }
 }
