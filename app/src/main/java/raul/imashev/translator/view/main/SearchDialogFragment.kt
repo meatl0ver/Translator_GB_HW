@@ -10,9 +10,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.textfield.TextInputEditText
-import geekbrains.ru.translator.utils.getEmptyString
 import kotlinx.android.synthetic.main.search_dialog_fragment.*
 import raul.imashev.translator.R
+import raul.imashev.translator.utils.getEmptyString
 
 class SearchDialogFragment : BottomSheetDialogFragment() {
 
@@ -48,11 +48,7 @@ class SearchDialogFragment : BottomSheetDialogFragment() {
         onSearchClickListener = listener
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.search_dialog_fragment, container, false)
     }
 
