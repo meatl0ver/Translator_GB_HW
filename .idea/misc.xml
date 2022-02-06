@@ -20,6 +20,10 @@
         <entry key="..\:/Users/Raul/AndroidStudioProjects/Translator/app/src/main/res/layout/recycler_view_item.xml" value="0.17300724637681159" />
         <entry key="..\:/Users/Raul/AndroidStudioProjects/Translator/app/src/main/res/layout/search_dialog_fragment.xml" value="0.17300724637681159" />
         <entry key="..\:/Users/Raul/AndroidStudioProjects/Translator/app/src/main/res/menu/history_menu.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/Raul/AndroidStudioProjects/Translator/historyscreen/src/main/res/drawable/bottom_sheet_dialog_background.xml" value="0.1453125" />
+        <entry key="..\:/Users/Raul/AndroidStudioProjects/Translator/historyscreen/src/main/res/layout/activity_history.xml" value="0.12916666666666668" />
+        <entry key="..\:/Users/Raul/AndroidStudioProjects/Translator/historyscreen/src/main/res/layout/activity_history_recyclerview_item.xml" value="0.12916666666666668" />
+        <entry key="..\:/Users/Raul/AndroidStudioProjects/Translator/historyscreen/src/main/res/layout/loading_layout.xml" value="0.12916666666666668" />
       </map>
     </option>
   </component>

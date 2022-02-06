@@ -8,13 +8,10 @@ import android.view.MenuItem
 import android.widget.ImageView
 import coil.ImageLoader
 import coil.request.LoadRequest
-import com.bumptech.glide.Glide
-import com.squareup.picasso.Callback
-import com.squareup.picasso.Picasso
 import raul.imashev.translator.R
 import raul.imashev.translator.databinding.ActivityDescriptionBinding
-import raul.imashev.translator.utils.network.isOnline
-import raul.imashev.translator.utils.ui.AlertDialogFragment
+import raul.imashev.utils.network.isOnline
+import raul.imashev.utils.ui.AlertDialogFragment
 
 class DescriptionActivity : AppCompatActivity() {
 
@@ -90,9 +87,6 @@ class DescriptionActivity : AppCompatActivity() {
                     imageView.setImageResource(R.drawable.ic_load_error_vector)
                 }
             )
-            //.transformations(
-            //    CircleCropTransformation(),
-            //)
             .build()
 
         ImageLoader(this).execute(request)
